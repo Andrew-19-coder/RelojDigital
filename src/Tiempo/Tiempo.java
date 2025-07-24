@@ -9,18 +9,22 @@ package Tiempo;
  * @author itsth
  */
 public abstract class Tiempo {
-    private int horas;
-    private int segundos;
-    private int minutos;
+    protected int horas;
+    protected int segundos;
+    protected int minutos;
+    protected boolean activo;
    
     
     public Tiempo() {
         this.horas = 0;
         this.segundos = 0;
         this.minutos = 0;
+        this.activo = false;
     }
     public void correr(){
-        segundos ++;
+        if(this.activo){
+            segundos++;
+        }
         if(segundos==60){
             segundos=0;
             minutos++;

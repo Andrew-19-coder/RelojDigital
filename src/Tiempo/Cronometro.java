@@ -6,19 +6,17 @@ package Tiempo;
 
 /**
  *
- * @author Jeshuan
+ * @author itsth
  */
-public class Reloj extends Tiempo implements Configurable{
+public class Cronometro extends Tiempo implements Controlable {
 
-    public Reloj() {
-        super();
+    @Override
+    public void inciar() {
         this.activo = true;
     }
-    
+
     @Override
-    public void configurar(int h, int m, int s) {
-      this.horas=h;
-      this.minutos=m;
-      this.segundos=s;
-    }  
+    public void detener() {
+        this.activo = false;
+    }
 }
