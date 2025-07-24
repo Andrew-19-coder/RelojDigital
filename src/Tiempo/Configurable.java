@@ -9,5 +9,5 @@ package Tiempo;
  * @author itsth
  */
 public interface Configurable {
-    
+    public void configurar(int horas, int minutos, int segundos);
 }
